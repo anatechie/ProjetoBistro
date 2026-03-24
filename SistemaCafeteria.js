@@ -86,5 +86,19 @@ class Pedido{
         })
     }
 
+    calcularTotal(){
+        let total = 0
+        this.itens.forEach(item =>{
+            total += item.preco
+        });
+        return total 
+    }
 
+    fecharPedido(){
+        this.verPedidos()
+
+        console.log(`Total a pagar ${this.calcularTotal()}`)
+    }
 }
+
+
